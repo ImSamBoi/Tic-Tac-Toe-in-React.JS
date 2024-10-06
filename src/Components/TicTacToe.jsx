@@ -70,7 +70,7 @@ const TicTacToe = () => {
     setLock(false);
     data = ['', '', '', '', '', '', '', '', ''];
     titleRef.current.innerHTML = "Tic Tac Toe in <span class='text-[#26ffcb] pl-3'>React</span>";
-
+    
     boxRefs.current.forEach((ref) => {
       ref.current.innerHTML = '';
     });
@@ -80,10 +80,10 @@ const TicTacToe = () => {
 
   return (
     <div className='h-screen w-screen flex flex-col justify-center items-center bg-[#0f1b21] font-bold p-12'>
-      <h1 className='flex flex-row items-center content-center text-white text-center text-5xl mb-8' ref={titleRef}>
+      <h1 className='flex flex-row items-center content-center text-white text-center text-5xl' ref={titleRef}>
         Tic Tac Toe in <span className='text-[#26ffcb] pl-3'>React</span>
       </h1>
-      <div className='flex m-auto h-[600px] w-[564px]'>
+      <div className='flex m-auto'>
 
         <div>
           <div ref={boxRefs.current[0]} className='flex h-44 w-44 bg-[#1f3540] border-4 border-[#0f1b21] rounded-xl cursor-pointer' onClick={(e) => { toggle(e, 0) }}></div>
@@ -104,7 +104,7 @@ const TicTacToe = () => {
         </div>
 
       </div>
-      <button className='w-64 h-24 border-0 outline-0 cursor-pointer rounded-[50px] bg-[#1f3540] font-[26px] text-[#26ffcb] mt-6' onClick={reset}>Reset</button>
+      <button className='w-64 h-24 border-0 outline-0 cursor-pointer rounded-[50px] bg-[#1f3540] font-[26px] text-[#26ffcb]' onClick={reset}>Reset</button>
     </div>
   );
 };
